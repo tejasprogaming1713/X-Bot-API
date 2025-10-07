@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Bot + API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">X-Bot<span>+API</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Build & Chat with Your Own <span>X-Bots</span></h1>
+      <p>Create, customize, and talk to your personal AI bots — all in your browser.</p>
+      <button class="btn" id="createBotBtn">Create a Bot</button>
+    </div>
+    <div class="hero-glow"></div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Core Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>⚙️ Create Bots</h3>
+        <p>Anyone can design their own X-Bot instantly.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💬 Real-Time Chat</h3>
+        <p>Talk to your creations and watch them respond like pros.</p>
+      </div>
+      <div class="feature-card">
+        <h3>☁️ Local Save</h3>
+        <p>Your bots stay saved in your browser — no login needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="dashboard">
+    <h2>Your Bots</h2>
+    <div class="bot-list" id="botList"></div>
+    <button class="btn addBot" id="addBot">+ New Bot</button>
+
+    <div class="chat-box" id="chatBox" style="display:none;">
+      <div class="chat-header">
+        <span id="chatBotName">X-Bot</span>
+        <button id="closeChat">✖</button>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <input type="text" id="chatInput" placeholder="Type your message...">
+      <button id="sendMsg">Send</button>
+    </div>
+  </section>
+
+  <!-- Modal for creating bot -->
+  <div class="modal" id="botModal">
+    <div class="modal-content">
+      <h2>Create New Bot</h2>
+      <input type="text" id="botName" placeholder="Bot Name">
+      <textarea id="botDesc" placeholder="Bot Description"></textarea>
+      <div class="modal-actions">
+        <button class="btn" id="saveBot">Save</button>
+        <button class="btn cancel" id="cancelBot">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 X-Bot + API. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
